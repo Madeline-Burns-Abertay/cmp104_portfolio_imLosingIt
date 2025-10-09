@@ -15,24 +15,24 @@
 		</Filter>
 	</ItemGroup>
 	<ItemGroup>
-		<ClCompile Include="src\main.cpp">
+		<ClCompile Include="main.cpp">
 			<Filter>Source Files</Filter>
 		</ClCompile>
-		<ClCompile Include="src\input.cpp">
+		<ClCompile Include="input.cpp">
 			<Filter>Source Files</Filter>
 		</ClCompile>
-		<ClCompile Include="src\inventory.cpp">
+		<ClCompile Include="inventory.cpp">
 			<Filter>Source Files</Filter>
 		</ClCompile>
-		<ClCompile Include="src\items.cpp">
+		<ClCompile Include="items.cpp">
 			<Filter>Source Files</Filter>
 		</ClCompile>
 	</ItemGroup>
 	<ItemGroup>
-		<ClCompile Include="head\input.hpp">
+		<ClCompile Include="input.hpp">
 			<Filter>Header Files</Filter>
 		</ClCompile>
-		<ClCompile Include="head\items.hpp">
+		<ClCompile Include="items.hpp">
 			<Filter>Header Files</Filter>
 		</ClCompile>
 	</ItemGroup>

@@ -123,10 +123,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Downloads\asdf\input.cpp" />
-    <ClCompile Include="..\..\..\..\Downloads\asdf\inventory.cpp" />
-    <ClCompile Include="..\..\..\..\Downloads\asdf\items.cpp" />
-    <ClCompile Include="..\..\..\..\Downloads\asdf\main.cpp" />
+    <ClCompile Include="input.cpp" />
+    <ClCompile Include="inventory.cpp" />
+    <ClCompile Include="items.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="items.hpp" />
+    <ClCompile Include="input.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

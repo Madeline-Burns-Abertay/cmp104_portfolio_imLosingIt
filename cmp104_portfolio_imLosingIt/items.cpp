@@ -1,5 +1,5 @@
 #include "items.hpp"
 
-class RoomItem {
+/*class RoomItem {
 
-};
+};*/

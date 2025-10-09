@@ -1,11 +1,13 @@
 #include <iostream>
 #include <string>
+#include <sstream>
 #include <vector>
 using namespace std;
 #ifndef input
 #define input
 
 typedef enum token {
+	ERROR,
 	LOOK_AROUND,
 	PICK_UP,
 	USE,
