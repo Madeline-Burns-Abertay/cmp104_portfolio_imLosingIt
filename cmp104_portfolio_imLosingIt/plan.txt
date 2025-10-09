@@ -1,0 +1,6 @@
+text based escape room
+
+i will need:
+	input tokenizer + parser
+	inventory
+	exit
