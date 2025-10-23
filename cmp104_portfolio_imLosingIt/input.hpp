@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <algorithm>
 #include <sstream>
 #include <vector>
 using namespace std;
@@ -14,7 +15,8 @@ typedef enum token {
 	UNLOCK
 };
 
-static vector<token> tokenize(istream stream, string in);
-static auto parse(vector<token> tokens);
+static vector<token> tokenize(istream, string);
+static auto parse(vector<token>);
+static void strToLower(string&);
 
 #endif // !input
