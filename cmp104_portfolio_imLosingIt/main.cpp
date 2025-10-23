@@ -6,9 +6,10 @@ int main() {
 	bool escaped = false;
 	string defaultMessage = "You should never see this message. If you do, email 2501892@abertay.ac.uk immediately.";
 	string choice;
-	string choicesMessage = defaultMessage;
+	string openingMessage, choicesMessage = defaultMessage;
+	openingMessage += " (type \"help\" for a list of commands)";
 	const string escapeMessage = "You escaped!\nThanks for playing!";
-	cout << defaultMessage << endl;
+	cout << openingMessage << endl;
 	while (!escaped) {
 		cout << choicesMessage << endl;
 		cout << "What do you do? "; getline(cin, choice);

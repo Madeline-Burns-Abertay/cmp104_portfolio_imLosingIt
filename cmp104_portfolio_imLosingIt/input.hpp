@@ -18,7 +18,6 @@ typedef enum token {
 	UNLOCK
 };
 
-
 static vector<token> tokenize(istream, string);
 static auto parse(vector<token>);
 static void strToLower(string&);
