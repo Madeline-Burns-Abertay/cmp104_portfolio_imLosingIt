@@ -14,10 +14,11 @@ int main() {
 		cout << "What do you do? "; getline(cin, choice);
 		vector<token> in = tokenize(choice);
 		while (in[0] == ERROR) {
-			cerr << "Error: Invalid input" << endl;
+			cerr << "Error: Invalid command" << endl;
 			cout << "What do you do? "; getline(cin, choice);
 			in = tokenize(choice);
 		}
+		parse(in);
 	}
 	cout << escapeMessage << endl;
 	return 0;
