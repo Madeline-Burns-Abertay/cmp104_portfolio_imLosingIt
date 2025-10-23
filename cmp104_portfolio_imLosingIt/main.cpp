@@ -11,11 +11,12 @@ int main() {
 	cout << defaultMessage << endl;
 	while (!escaped) {
 		cout << choicesMessage << endl;
-		cout << "What do you do?"; getline(cin, choice);
+		cout << "What do you do? "; getline(cin, choice);
 		vector<token> in = tokenize(choice);
 		while (in[0] == ERROR) {
 			cerr << "Error: Invalid input";
-			cout << "What do you do?"; getline(cin, choice);
+			cout << "What do you do? "; getline(cin, choice);
+			in = tokenize(choice);
 		}
 	}
 	cout << escapeMessage << endl;
