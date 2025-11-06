@@ -1,22 +1,24 @@
-#include "items.hpp"
+#include "Inventory.h"
 
-class Inventory {
-private:
-	vector<RoomItem> inventory;
-public:
-	Inventory() {
-		inventory = {};
+Inventory::Inventory() {
+	inventory = {};
+}
+
+void Inventory::pickUpItem(RoomItem item) {
+	inventory.push_back(item);
+}
+
+void Inventory::useItem(RoomItem item) {
+	item.use();
+	auto element = std::find(inventory.begin(), inventory.end(), item);
+	if (element != inventory.end()) {
+		inventory.erase(element);
 	}
-	void pickUpItem(RoomItem item) {
-		inventory.push_back(item);
+}
+
+void Inventory::listItems() {
+	std::cout << "You have:" << std::endl;
+	for (RoomItem item : inventory) {
+		std::cout << item.getName() << std::endl;
 	}
-	void useItem(RoomItem item) {
-		auto element = std::find(inventory.begin(), inventory.end(), item);
-		if (element != inventory.end()) {
-			inventory.erase(element);
-		}
-		else {
-			
-		}
-	}
-};
+}

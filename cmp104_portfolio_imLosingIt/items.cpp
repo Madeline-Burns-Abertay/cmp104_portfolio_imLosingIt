@@ -1,6 +1,5 @@
 #include "items.hpp"
 
-
-/*class RoomItem {
-
-};*/
+std::string RoomItem::getName() {
+	return name;
+}

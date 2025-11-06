@@ -1,4 +1,4 @@
-#include "input.cpp"
+#include "input.hpp"
 using namespace std;
 
 int main() {
@@ -8,19 +8,18 @@ int main() {
 	string choice;
 	string openingMessage, choicesMessage = defaultMessage;
 	openingMessage += " (type \"help\" for a list of commands)";
-	const string escapeMessage = "You escaped!\nThanks for playing!";
 	cout << openingMessage << endl;
 	while (!escaped) {
 		cout << choicesMessage << endl;
 		cout << "What do you do? "; getline(cin, choice);
-		vector<token> in = tokenize(choice);
-		while (in[0] == ERROR) {
+		vector<Token> in = tokenize(choice);
+		while (in[0].getType() == ERROR) {
 			cerr << "Error: Invalid command" << endl;
 			cout << "What do you do? "; getline(cin, choice);
 			in = tokenize(choice);
 		}
 		parse(in);
 	}
-	cout << escapeMessage << endl;
+	cout << "You escaped!\nThanks for playing!" << endl;
 	return 0;
 }

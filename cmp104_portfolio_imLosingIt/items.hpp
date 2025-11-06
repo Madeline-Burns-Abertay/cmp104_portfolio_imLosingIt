@@ -1,10 +1,11 @@
+#pragma once
 #include <string>
 #include <vector>
-using namespace std;
-#ifndef objects
-#define objects
 
-typedef class RoomItem {};
-class Inventory;
-
-#endif
+class RoomItem {
+private:
+	std::string name;
+public:
+	std::string getName();
+	void use();
+};
