@@ -5,7 +5,12 @@
 class RoomItem {
 private:
 	std::string name;
+	bool canPickUp;
 public:
+	RoomItem(std::string, bool);
+	~RoomItem();
+
 	std::string getName();
-	void use();
+	bool tryPickUp();
+	bool operator==(RoomItem);
 };

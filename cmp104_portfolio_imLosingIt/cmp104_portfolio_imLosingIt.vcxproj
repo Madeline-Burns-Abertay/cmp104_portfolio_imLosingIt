@@ -124,17 +124,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="input.cpp" />
+    <ClCompile Include="InputHandler.cpp" />
     <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="items.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="items.hpp" />
-    <ClCompile Include="input.hpp" />
+    <ClCompile Include="InputHandler.hpp" />
     <ClCompile Include="Token.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Inventory.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Token.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="cmp104_portfolio_imLosingIt.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

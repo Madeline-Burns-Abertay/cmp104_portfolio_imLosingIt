@@ -9,7 +9,7 @@ private:
 public:
 	Inventory();
 	void pickUpItem(RoomItem item);
-	void useItem(RoomItem item);
+	void deleteItem(RoomItem item);
 	void listItems();
 };
 

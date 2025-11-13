@@ -8,7 +8,8 @@ enum Type {
 	PICK_UP,
 	USE,
 	UNLOCK,
-	ITEM
+	ITEM,
+	VIEW_INVENTORY
 };
 
 class Token {

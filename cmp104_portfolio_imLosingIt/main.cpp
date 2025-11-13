@@ -1,24 +1,25 @@
-#include "input.hpp"
+#include "InputHandler.hpp"
+#include "resource.h"
 using namespace std;
 
 int main() {
 	// text based escape room
 	bool escaped = false;
-	string defaultMessage = "You should never see this message. If you do, email 2501892@abertay.ac.uk immediately.";
 	string choice;
-	string openingMessage, choicesMessage = defaultMessage;
-	openingMessage += " (type \"help\" for a list of commands)";
-	cout << openingMessage << endl;
+	Inventory inventory;
+	InputHandler input;
+
+	cout << OPENING_MESSAGE << " (type \"help\" for a list of commands)" << endl;
 	while (!escaped) {
-		cout << choicesMessage << endl;
+		cout << CHOICES_MESSAGE << endl;
 		cout << "What do you do? "; getline(cin, choice);
-		vector<Token> in = tokenize(choice);
+		vector<Token> in = input.tokenize(choice);
 		while (in[0].getType() == ERROR) {
 			cerr << "Error: Invalid command" << endl;
 			cout << "What do you do? "; getline(cin, choice);
-			in = tokenize(choice);
+			in = input.tokenize(choice);
 		}
-		parse(in);
+		input.parse(in, inventory);
 	}
 	cout << "You escaped!\nThanks for playing!" << endl;
 	return 0;
