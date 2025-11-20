@@ -9,6 +9,6 @@
 class InputHandler {
 public:
 	std::vector<Token> tokenize(std::string);
-	void parse(std::vector<Token>, Inventory);
+	void parse(std::vector<Token>, Inventory, bool&);
 	void tolower(std::string&);
 };

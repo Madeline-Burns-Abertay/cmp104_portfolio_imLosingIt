@@ -22,3 +22,8 @@ void Inventory::listItems() {
 		std::cout << item.getName() << std::endl;
 	}
 }
+
+bool Inventory::hasItem(RoomItem item) {
+	auto element = std::find(inventory.begin(), inventory.end(), item);
+	return (element != inventory.end());
+}

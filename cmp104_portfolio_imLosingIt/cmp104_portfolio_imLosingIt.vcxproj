@@ -137,9 +137,6 @@
     <ClInclude Include="resource.h" />
     <ClInclude Include="Token.h" />
   </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="cmp104_portfolio_imLosingIt.rc" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

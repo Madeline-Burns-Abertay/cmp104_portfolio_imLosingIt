@@ -21,23 +21,29 @@ std::vector<Token> InputHandler::tokenize(std::string in) {
 	return { Token(ERROR) };
 }
 
-void InputHandler::parse(std::vector<Token> tokens, Inventory inventory) {
-	bool stop = false;
+void InputHandler::parse(std::vector<Token> tokens, Inventory inventory, bool &escaped) {
+	std::string state = "";
 	int i = 0;
-	while (!stop && i < tokens.size()) {
+	while (state != "stop" && i < tokens.size()) {
 		switch (tokens[i].getType()) {
 		case HELP:
 			std::cout << "Commands:\nlook around\npick up [item]\nunlock [item]\nuse [item]\nview inventory" << std::endl;
-			stop = true;
+			state = "stop";
 			break;
 		case LOOK_AROUND:
 			// do i need this?
-			stop = true;
+			state = "stop";
 			break;
 		case VIEW_INVENTORY:
 			inventory.listItems();
-			stop = true;
+			state = "stop";
 			break;
+		case UNLOCK:
+			if (inventory.hasItem(RoomItem("Key", true))) {
+				state = "unlock";
+			}
+			std::cout << "You don't have the key." << std::endl;
+			state = "stop";
 		}
 		i++;
 	}

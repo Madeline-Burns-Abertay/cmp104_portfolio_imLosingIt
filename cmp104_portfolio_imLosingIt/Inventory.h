@@ -8,8 +8,9 @@ private:
 	std::vector<RoomItem> inventory;
 public:
 	Inventory();
-	void pickUpItem(RoomItem item);
-	void deleteItem(RoomItem item);
+	void pickUpItem(RoomItem);
+	void deleteItem(RoomItem);
 	void listItems();
+	bool hasItem(RoomItem);
 };
 
